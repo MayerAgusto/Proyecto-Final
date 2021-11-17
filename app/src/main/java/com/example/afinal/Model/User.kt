@@ -12,18 +12,10 @@ class User {
         this.email = email
         this.password = password
     }
-    fun getName():String {
-        return this.name
-    }
-    fun getLastName():String{
-        return this.lastName
-    }
-    fun getPassword():String{
-        return this.password
-    }
-    fun getEmail():String {
-        return this.email
-    }
+    fun getName():String { return this.name }
+    fun getLastName():String{ return this.lastName }
+    fun getPassword():String{ return this.password }
+    fun getEmail():String { return this.email }
     fun setName(name:String){this.name = name}
     fun setLastName(lastName:String){this.lastName=lastName}
     fun setPassword(password:String){this.password = password}

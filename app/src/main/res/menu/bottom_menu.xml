@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/firstFragment"
+        android:title="Inicio"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/graphFragment"
+        android:title="Estadisticas"
+        android:icon="@drawable/ic_stadistic"/>
+    <item
+        android:id="@+id/suggestFragment"
+        android:title="Sugerencias"
+        android:icon="@drawable/ic_suggest"/>
+</menu>
