@@ -4,27 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0C40DA">
+    android:background="@drawable/fragmet_shape">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="72dp"
         android:text="Registrate"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etRegisterName"
-        android:layout_width="wrap_content"
+        android:layout_width="241dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="168dp"
+        android:background="#30ffffff"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
+        android:drawableLeft="@drawable/ic_person"
+        android:padding="15dp"
+        android:textColorHint="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,12 +38,16 @@
 
     <EditText
         android:id="@+id/etRegisterLastName"
-        android:layout_width="wrap_content"
+        android:layout_width="241dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:drawableLeft="@drawable/ic_person"
         android:hint="Apellidos"
+        android:background="#30ffffff"
+        android:padding="15dp"
+        android:textColorHint="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,12 +55,16 @@
 
     <EditText
         android:id="@+id/etRegisterEmail"
-        android:layout_width="wrap_content"
+        android:layout_width="241dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:ems="10"
+        android:padding="15dp"
+        android:background="#30ffffff"
         android:hint="Correo Electronico"
+        android:drawableLeft="@drawable/ic_person"
         android:inputType="textEmailAddress"
+        android:textColorHint="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,12 +72,16 @@
 
     <EditText
         android:id="@+id/etRegisterPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="241dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:drawableLeft="@drawable/ic_person"
         android:hint="Contraseña"
+        android:background="#30ffffff"
+        android:textColorHint="#ffffff"
+        android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,11 +92,11 @@
         android:layout_width="199dp"
         android:layout_height="60dp"
         android:layout_marginTop="36dp"
+        android:background="@drawable/customize_button_shape"
         android:text="Crear Cuenta"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.429"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etRegisterPassword" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

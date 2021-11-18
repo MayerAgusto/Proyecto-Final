@@ -3,15 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/drawable/button_shape.xml" value="0.1685185185185185" />
+        <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/drawable/customize_button_shape.xml" value="0.1685185185185185" />
+        <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/drawable/fragmet_shape.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/drawable/ic_baseline_local_police_24.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1685185185185185" />
         <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/drawable/redondo.xml" value="0.2203125" />
-        <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/drawable/register_button.xml" value="0.1638888888888889" />
+        <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/layout/activity_second.xml" value="0.2" />
         <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/layout/activity_second2.xml" value="0.14947916666666666" />
-        <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/layout/fragment_first.xml" value="0.2" />
+        <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/layout/fragment_first.xml" value="0.16" />
         <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/layout/fragment_graph.xml" value="0.1859375" />
         <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/layout/fragment_main.xml" value="0.1859375" />
         <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/layout/fragment_suggest.xml" value="0.1859375" />
-        <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/layout/register_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/layout/register_fragment.xml" value="0.33" />
         <entry key="..\:/Users/MG/AndroidStudioProjects/Final/app/src/main/res/menu/bottom_menu.xml" value="0.1859375" />
       </map>
     </option>
