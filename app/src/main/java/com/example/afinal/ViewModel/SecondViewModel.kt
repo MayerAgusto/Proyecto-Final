@@ -14,6 +14,7 @@ class SecondViewModel: ViewModel() {
     fun initializeSecondViewModel(activity: SecondActivity, binding: ActivitySecondBinding){
         this.activity = activity
         this.binding = binding
+
         //actionsSecondView()
 
         auth = FirebaseAuth.getInstance()

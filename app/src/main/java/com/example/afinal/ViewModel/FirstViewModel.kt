@@ -3,10 +3,12 @@ package com.example.afinal.ViewModel
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import androidx.core.app.ActivityCompat
+import com.example.afinal.R
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import com.example.afinal.View.MainActivity
+import com.example.afinal.View.MapFragment
+import com.example.afinal.View.StationMapFragment
 import com.example.afinal.databinding.FragmentFirstBinding
 import com.google.firebase.auth.FirebaseAuth
 import java.util.jar.Manifest
@@ -39,16 +41,20 @@ class FirstViewModel: ViewModel() {
         }
     }
     private fun googleMapPolice(){
-        val gmmIntentUri =  Uri.parse("google.navigation:q=comisaria+mas+cercana")
-        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
-        mapIntent.setPackage("com.google.android.apps.maps")
-        fragment.activity?.startActivity(mapIntent)
+       val fragments = StationMapFragment()
+        fragment.parentFragmentManager.beginTransaction().apply {
+            replace(R.id.frMap, fragments)
+            addToBackStack(null)
+            commit()
+        }
     }
     private fun googleMapWomanStation(){
-        val gmmIntentUri =  Uri.parse("google.navigation:q=centro+de+emergencia+mujer+mas+cercano")
-        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
-        mapIntent.setPackage("com.google.android.apps.maps")
-        fragment.activity?.startActivity(mapIntent)
+        val fragments = MapFragment()
+        fragment.parentFragmentManager.beginTransaction().apply {
+            replace(R.id.frMap, fragments)
+            addToBackStack(null)
+            commit()
+        }
     }
 
     private fun makeCall(){

@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     android:background="#E05FDA"
     >
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frMap"
+        android:layout_width="331dp"
+        android:layout_height="638dp"
+        android:layout_marginTop="28dp"
+        android:translationZ="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="174dp"

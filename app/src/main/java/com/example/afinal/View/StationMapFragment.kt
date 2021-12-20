@@ -6,27 +6,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.example.afinal.ViewModel.FirstViewModel
-import com.example.afinal.databinding.FragmentFirstBinding
+import com.example.afinal.R
+import com.example.afinal.ViewModel.MapStationViewModel
+import com.example.afinal.databinding.FragmentStationMapBinding
 
 
-class FirstFragment : Fragment() {
-    private var _binding:FragmentFirstBinding? = null
+class StationMapFragment : Fragment() {
+    private var _binding:FragmentStationMapBinding? = null
     private val binding get() = _binding!!
-    private val firstViewModel:FirstViewModel by viewModels()
+    private val mapStationViewModel:MapStationViewModel by viewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentFirstBinding.inflate(inflater,container, false)
+        _binding = FragmentStationMapBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        firstViewModel.initializeBinding(binding,this)
+        mapStationViewModel.initializeBinding(binding, this)
     }
-
 }
