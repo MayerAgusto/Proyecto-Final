@@ -2,4 +2,22 @@
     <string name="app_name">Final</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Start">Inicio de Sesion</string>
+    <string name="Email">Correo Electronico</string>
+    <string name="Password">Contraseña</string>
+    <string name="Register">Registrate</string>
+    <string name="Go">Ingresar</string>
+    <string name="Name">Nombre</string>
+    <string name="LastName">Apellidos</string>
+    <string name="CreateCount">Crear Cuenta</string>
+    <string name="Home">Inicio</string>
+    <string name="Stadistic">Estadisticas</string>
+    <string name="Suggest">Sugerencias</string>
+    <string name="Welcome">Bienvenida</string>
+    <string name="BigText">Recuerde: Si quiere realizar una llamada de emergencia a la linea #100 solo pulse el boton redondo</string>
+    <string name="Close">Salir</string>
+    <string name="CallLine">Llamar Linea 100</string>
+    <string name="WomanCenter">Centro de Emergencia Mujer mas cerano</string>
+    <string name="PoliceStation">Estacion policial mas cerano</string>
+
 </resources>

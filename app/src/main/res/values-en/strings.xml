@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Start">Login</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="Register">Register</string>
+    <string name="Go">Go</string>
+    <string name="Name">Name</string>
+    <string name="LastName">Last Name</string>
+    <string name="CreateCount">Create Count</string>
+    <string name="Home">Home</string>
+    <string name="Stadistic">Stadistic</string>
+    <string name="Suggest">Suggest</string>
+    <string name="Welcome">Welcome</string>
+    <string name="BigText">Remember: If you want to make an emergency call to line # 100 just press the round button</string>
+    <string name="Close">Close</string>
+    <string name="CallLine">Call line #100</string>
+    <string name="WomanCenter">Woman Emergency Center</string>
+    <string name="PoliceStation">Police Station</string>
+</resources>
