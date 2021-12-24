@@ -1,9 +1,11 @@
 package com.example.afinal.ViewModel
 
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.afinal.Model.Score
+import com.example.afinal.Model.Suggest
 import com.example.afinal.databinding.FragmentGraphBinding
 import com.github.mikephil.charting.components.AxisBase
 import com.github.mikephil.charting.components.XAxis
@@ -12,7 +14,7 @@ import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.utils.ColorTemplate
-import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.*
 
 
 class GraphViewModel:ViewModel() {
@@ -93,6 +95,29 @@ class GraphViewModel:ViewModel() {
 
     fun loadData(){
         woman_Departament = mutableMapOf()
+        db = FirebaseFirestore.getInstance()
+        db.collection("centros_emergencia_mujer").addSnapshotListener(object : EventListener<QuerySnapshot> {
+            override fun onEvent(value: QuerySnapshot?, error: FirebaseFirestoreException?) {
+                if (error != null){
+
+                }
+                for (dc: DocumentChange in value?.documentChanges!!){
+                    if(dc.type == DocumentChange.Type.ADDED){
+                        var name = dc.document["departamento"].toString()
+                        if (name in woman_Departament.keys){
+                            woman_Departament[name] = woman_Departament[name]!! + 1
+                        }else{
+                            woman_Departament[name] = 0
+                        }
+
+                    }
+                }
+                Log.e("ar", woman_Departament.keys.toString())
+                Log.e("ar", woman_Departament.values.toString())
+                binding.barChart.notifyDataSetChanged()
+            }
+        })
+
         woman_Departament["AMAZONAS"] = 2
         woman_Departament["ANCASH"] = 8
         woman_Departament["APURIMAC"] = 5
@@ -119,6 +144,7 @@ class GraphViewModel:ViewModel() {
         woman_Departament["TACNA"] = 6
         woman_Departament["TUMBES"] = 4
         woman_Departament["UCAYALI"] = 5
+
 
     }
 
