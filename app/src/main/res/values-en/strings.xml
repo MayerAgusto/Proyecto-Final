@@ -18,4 +18,6 @@
     <string name="CallLine">Call line #100</string>
     <string name="WomanCenter">Woman Emergency Center</string>
     <string name="PoliceStation">Police Station</string>
+    <string name="Graphic">Woman emergency centers by department</string>
+    <string name="Look">Search by department</string>
 </resources>

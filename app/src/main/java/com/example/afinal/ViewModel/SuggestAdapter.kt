@@ -9,7 +9,7 @@ import com.example.afinal.R
 import com.example.afinal.databinding.SuggestItemBinding
 import com.squareup.picasso.Picasso
 
-class SuggestAdapter(val suggestList:List<Suggest>):RecyclerView.Adapter<SuggestAdapter.SuggestHolder>() {
+class SuggestAdapter(var suggestList:List<Suggest>):RecyclerView.Adapter<SuggestAdapter.SuggestHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SuggestHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -27,6 +27,10 @@ class SuggestAdapter(val suggestList:List<Suggest>):RecyclerView.Adapter<Suggest
 
     override fun getItemCount(): Int {
         return suggestList.size
+    }
+    fun filterList(filteredList: ArrayList<Suggest>) {
+        suggestList= filteredList
+        notifyDataSetChanged()
     }
 
     class SuggestHolder(val view:View):RecyclerView.ViewHolder(view){

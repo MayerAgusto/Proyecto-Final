@@ -19,5 +19,7 @@
     <string name="CallLine">Llamar Linea 100</string>
     <string name="WomanCenter">Centro de Emergencia Mujer mas cerano</string>
     <string name="PoliceStation">Estacion policial mas cerano</string>
+    <string name="Graphic">Centros de emergencia mujer por departamento</string>
+    <string name="Look">Buscar por departamento</string>
 
 </resources>

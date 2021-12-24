@@ -1,11 +1,20 @@
 package com.example.afinal.ViewModel
 
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.afinal.Model.Suggest
 import com.example.afinal.databinding.FragmentSuggestBinding
 import com.google.firebase.firestore.*
+import android.text.Editable
+
+import android.R
+
+import android.widget.EditText
+
+
+
 
 class SugestViewModel: ViewModel() {
     lateinit var binding: FragmentSuggestBinding
@@ -20,6 +29,24 @@ class SugestViewModel: ViewModel() {
 
         loadData()
         loadRecyclerView()
+
+
+        binding.etLookFor.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: Editable) {
+                filter(s.toString())
+            }
+        })
+    }
+    private fun filter(text: String) {
+        val filteredList: ArrayList<Suggest> = ArrayList()
+        for (item in suggestList) {
+            if (item.category.toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(item)
+            }
+        }
+        myAdapter.filterList(filteredList)
     }
     private fun loadData() {
         suggestList = arrayListOf()
