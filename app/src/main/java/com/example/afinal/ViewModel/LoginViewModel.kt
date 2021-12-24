@@ -14,8 +14,8 @@ import com.google.firebase.auth.FirebaseAuth
 class LoginViewModel: ViewModel() {
     private var activity:MainActivity? = null
     private var binding: ActivityMainBinding? = null
-
     lateinit var auth: FirebaseAuth
+
 
     fun initializeLoginView(activity: MainActivity, binding: ActivityMainBinding){
         this.activity = activity

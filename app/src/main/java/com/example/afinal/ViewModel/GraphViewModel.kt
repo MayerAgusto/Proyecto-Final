@@ -34,10 +34,8 @@ class GraphViewModel:ViewModel() {
         scoreList = getScoreList()
         initBarChart()
 
-        //now draw bar chart with dynamic data
         val entries: ArrayList<BarEntry> = ArrayList()
 
-        //you can replace this data object with  your custom object
         for (i in scoreList.indices) {
             val score = scoreList[i]
             entries.add(BarEntry(i.toFloat(), score.score.toFloat()))
@@ -61,27 +59,18 @@ class GraphViewModel:ViewModel() {
     }
 
     private fun initBarChart() {
-//        hide grid lines
+
         binding.barChart.axisLeft.setDrawGridLines(false)
         val xAxis: XAxis = binding.barChart.xAxis
         xAxis.setDrawGridLines(false)
         xAxis.setDrawAxisLine(false)
 
-        //remove right y-axis
         binding.barChart.axisRight.isEnabled = false
-
-        //remove legend
         binding.barChart.legend.isEnabled = false
 
-
-        //remove description label
         binding.barChart.description.isEnabled = false
-
-
-        //add animation
         binding.barChart.animateY(4000)
 
-        // to draw label on xAxis
         xAxis.position = XAxis.XAxisPosition.BOTTOM_INSIDE
         xAxis.valueFormatter = MyAxisFormatter()
         xAxis.setDrawLabels(true)

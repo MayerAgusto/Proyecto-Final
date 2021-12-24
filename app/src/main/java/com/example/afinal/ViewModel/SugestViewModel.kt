@@ -1,19 +1,16 @@
 package com.example.afinal.ViewModel
 
+import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.afinal.Model.Suggest
 import com.example.afinal.databinding.FragmentSuggestBinding
+import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.firestore.*
-import android.text.Editable
-
-import android.R
-
-import android.widget.EditText
-
-
+import java.lang.Error
 
 
 class SugestViewModel: ViewModel() {
@@ -51,10 +48,29 @@ class SugestViewModel: ViewModel() {
     private fun loadData() {
         suggestList = arrayListOf()
         db = FirebaseFirestore.getInstance()
+        db.collection("sugerencias").addSnapshotListener(object : EventListener<QuerySnapshot>{
+            override fun onEvent(value: QuerySnapshot?, error: FirebaseFirestoreException?) {
+                if (error != null){
+
+                }
+                for (dc: DocumentChange in value?.documentChanges!!){
+                    if(dc.type == DocumentChange.Type.ADDED){
+                        suggestList.add(dc.document.toObject(Suggest::class.java))
+
+                    }
+                }
+
+                myAdapter.notifyDataSetChanged()
+            }
+        })
+
+        /*
         db.collection("sugerencias").
                 get().addOnSuccessListener {
                 for (document in it){
                     val name:String = document["title"] as String
+
+
                     val image:String = document["image"] as String
                     val category:String = document["category"] as String
                     val description:String = document["description"] as String
@@ -63,6 +79,7 @@ class SugestViewModel: ViewModel() {
                 }
             myAdapter.notifyDataSetChanged()
         }
+         */
     }
     private fun loadRecyclerView(){
         binding.rvSuggest.layoutManager = LinearLayoutManager(fragment.activity)

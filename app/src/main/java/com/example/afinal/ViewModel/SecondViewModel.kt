@@ -21,14 +21,14 @@ class SecondViewModel: ViewModel() {
 
     }
 
+    private fun goToLogin(){
+        val intent = Intent(activity,MainActivity::class.java)
+        activity.startActivity(intent)
+    }
     private fun actionsSecondView(){
         /*binding.btClose.setOnClickListener {
             auth.signOut()
             goToLogin()
         }*/
-    }
-    private fun goToLogin(){
-        val intent = Intent(activity,MainActivity::class.java)
-        activity.startActivity(intent)
     }
 }
