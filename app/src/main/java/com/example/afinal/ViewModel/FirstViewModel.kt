@@ -41,20 +41,18 @@ class FirstViewModel: ViewModel() {
         }
     }
     private fun googleMapPolice(){
-       val fragments = StationMapFragment()
-        fragment.parentFragmentManager.beginTransaction().apply {
-            replace(R.id.frMap, fragments)
-            addToBackStack(null)
-            commit()
-        }
+        val gmmIntentUri =
+            Uri.parse("google.navigation:q=estacdion+policial+mas+cercana")
+        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+        mapIntent.setPackage("com.google.android.apps.maps")
+        fragment.activity?.startActivity(mapIntent)
     }
     private fun googleMapWomanStation(){
-        val fragments = MapFragment()
-        fragment.parentFragmentManager.beginTransaction().apply {
-            replace(R.id.frMap, fragments)
-            addToBackStack(null)
-            commit()
-        }
+        val gmmIntentUri =
+            Uri.parse("google.navigation:q=estacion+de+emergencia+mujer+mas+cercano")
+        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+        mapIntent.setPackage("com.google.android.apps.maps")
+        fragment.activity?.startActivity(mapIntent)
     }
 
     private fun makeCall(){

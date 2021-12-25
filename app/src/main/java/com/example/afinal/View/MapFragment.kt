@@ -13,7 +13,7 @@ import com.example.afinal.databinding.FragmentMapBinding
 class MapFragment : Fragment() {
     private var _binding:FragmentMapBinding? = null
     private val binding get() = _binding!!
-    private val mapViewModel:MapViewModel by viewModels()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,7 +26,7 @@ class MapFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mapViewModel.initializeBinding(binding, this)
+
     }
 
 
